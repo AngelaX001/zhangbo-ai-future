@@ -43,7 +43,12 @@ h2 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.25;
 .tag { padding: 12px 20px; background: rgba(255,255,255,0.1); border-radius: 10px; font-size: 14px; font-weight: 500; color: white; }
 .tag-highlight { background: rgba(255,255,255,0.2); }
 .step-number { width: 64px; height: 64px; border-radius: 50%; background: rgba(255,255,255,0.12); color: white; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; margin-bottom: 28px; }
-@media (max-width: 768px) { .slide { padding: 32px 24px; } .two-col { grid-template-columns: 1fr; gap: 28px; } .card { padding: 28px 20px; } }
+.step-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 32px; }
+.step-item { background: rgba(255,255,255,0.07); border-radius: 16px; padding: 28px; border: 1px solid rgba(255,255,255,0.1); }
+.step-item .num { font-size: 28px; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
+.step-item .label { font-size: 15px; font-weight: 600; color: white; margin-bottom: 8px; }
+.step-item .desc { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+@media (max-width: 768px) { .slide { padding: 32px 24px; } .two-col { grid-template-columns: 1fr; gap: 28px; } .card { padding: 28px 20px; } .step-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -78,51 +83,102 @@ h2 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.25;
     </div>
   </div>
 
-  <!-- 3. Two Schools (NEW) -->
+  <!-- 3. Two Schools -->
   <div class="slide bg-3">
     <div class="content">
       <div class="deco-line"></div>
       <p class="kicker">2026年6月演讲 · 两大学派</p>
-      <h1>行为主义<br>vs 少数派</h1>
+      <h1>行为主义<br>vs 内在主义</h1>
       <div class="two-col" style="margin-top: 8px;">
         <div>
           <h2 style="font-size: 1.3rem;">主流：行为主义</h2>
-          <p class="lead" style="font-size: 1rem;">用机器模拟人类的行为——从外部表现入手，不依赖对大脑的理解。</p>
+          <p class="lead" style="font-size: 1rem;">用机器模拟人类的行为——从外部表现入手，追求行为相似性，不追求工作原理的一致性。探索一条与人类不同的机器智能化道路。</p>
         </div>
         <div>
-          <h2 style="font-size: 1.3rem;">少数派</h2>
-          <p class="lead" style="font-size: 1rem;">研究大脑机理，道路艰难。人类对大脑的理解还不够深入。</p>
+          <h2 style="font-size: 1.3rem;">少数派：内在主义</h2>
+          <p class="lead" style="font-size: 1rem;">模拟大脑神经网络的工作原理。弱版本：脑启发计算；强版本：类脑计算。追求机器与大脑神经机制的一致性。</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 4. Three Generations Overview -->
+  <!-- 4. Agent Structure -->
   <div class="slide bg-1">
+    <div class="content">
+      <div class="deco-line"></div>
+      <p class="kicker">智能体</p>
+      <h1>感知 · 思考 · 行动</h1>
+      <p class="lead" style="margin-bottom: 24px;">研究与设计智能体（Agent）的核心架构：在环境中持续感知、思考、行动，形成闭环。</p>
+      <div class="tag-row">
+        <div class="tag">感知（Sensing）</div>
+        <div class="tag tag-highlight">思考（Thinking）</div>
+        <div class="tag">行动（Acting）</div>
+      </div>
+      <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5);">情感与激励因素对智能体各环节进行调控，与环境形成持续交互循环。</p>
+    </div>
+  </div>
+
+  <!-- 5. Four Basic Tasks -->
+  <div class="slide bg-2">
+    <div class="content">
+      <div class="deco-line"></div>
+      <p class="kicker">人工智能的4项基本任务</p>
+      <h1>为智能行为<br>建立计算模型</h1>
+      <div class="step-grid" style="margin-top: 32px;">
+        <div class="step-item">
+          <div class="num">01</div>
+          <div class="label">理性思维</div>
+          <div class="desc">深思熟虑的行为-计算模型</div>
+        </div>
+        <div class="step-item">
+          <div class="num">02</div>
+          <div class="label">感觉</div>
+          <div class="desc">视、听、触觉等行为-计算模型</div>
+        </div>
+        <div class="step-item">
+          <div class="num">03</div>
+          <div class="label">动作协调控制</div>
+          <div class="desc">智能控制-计算模型</div>
+        </div>
+        <div class="step-item">
+          <div class="num">04</div>
+          <div class="label">情感、激情、意图</div>
+          <div class="desc">情感行为-计算模型</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. AI History Timeline -->
+  <div class="slide bg-3">
     <div class="content" style="text-align: center;">
       <div class="deco-line deco-line-center"></div>
-      <p class="kicker">核心理论</p>
-      <h1>三代人工智能</h1>
-      <p class="lead lead-center" style="margin-bottom: 48px;">张钹将AI发展划分为三个阶段。</p>
-      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <div style="text-align: center; padding: 20px 28px; background: rgba(255,255,255,0.08); border-radius: 16px;">
-          <div style="font-size: 32px; font-weight: 700; color: white; margin-bottom: 8px;">01</div>
-          <div style="font-size: 13px; color: rgba(255,255,255,0.5);">知识驱动</div>
+      <p class="kicker">人工智能（主流）发展简史</p>
+      <h1>三代人工智能<br>演进曲线</h1>
+      <p class="lead lead-center" style="margin-bottom: 36px;">1956年达特茅斯会议 → 1974年第一代高峰 → 1987年第二代兴起 → 2015年深度学习突破 → 2020年大模型爆发</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <div style="text-align: center; padding: 20px 28px; background: rgba(255,255,255,0.08); border-radius: 16px; min-width: 180px;">
+          <div style="font-size: 28px; font-weight: 700; color: #9B7ED8; margin-bottom: 8px;">第一代</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.6);">符号主义 · 知识驱动</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 4px;">1956-1980s</div>
         </div>
-        <div style="text-align: center; padding: 20px 28px; background: rgba(255,255,255,0.08); border-radius: 16px;">
-          <div style="font-size: 32px; font-weight: 700; color: white; margin-bottom: 8px;">02</div>
-          <div style="font-size: 13px; color: rgba(255,255,255,0.5);">数据驱动</div>
+        <div style="text-align: center; padding: 20px 28px; background: rgba(255,255,255,0.08); border-radius: 16px; min-width: 180px;">
+          <div style="font-size: 28px; font-weight: 700; color: #7EC8A0; margin-bottom: 8px;">第二代</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.6);">连接主义 · 数据驱动</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 4px;">1987-2015</div>
         </div>
-        <div style="text-align: center; padding: 20px 28px; background: rgba(255,255,255,0.12); border-radius: 16px; border: 1px solid rgba(255,255,255,0.15);">
-          <div style="font-size: 32px; font-weight: 700; color: white; margin-bottom: 8px;">03</div>
-          <div style="font-size: 13px; color: rgba(255,255,255,0.5);">知识+数据融合</div>
+        <div style="text-align: center; padding: 20px 28px; background: rgba(255,255,255,0.12); border-radius: 16px; border: 1px solid rgba(255,255,255,0.15); min-width: 180px;">
+          <div style="font-size: 28px; font-weight: 700; color: #E6A07E; margin-bottom: 8px;">第三代</div>
+          <div style="font-size: 13px; color: rgba(255,255,255,0.6);">生成式AI · 大语言模型</div>
+          <div style="font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 4px;">2015-2030+</div>
         </div>
       </div>
+      <p style="margin-top: 24px; font-size: 13px; color: rgba(255,255,255,0.4);">1978年 清华大学成立人工智能教研组，与国际前沿同步</p>
     </div>
   </div>
 
-  <!-- 5. Gen 1 -->
-  <div class="slide bg-2">
+  <!-- 7. Gen 1 - Knowledge Driven -->
+  <div class="slide bg-1">
     <div class="content">
       <div class="deco-line"></div>
       <p class="kicker">第一代 · 1956年起</p>
@@ -133,75 +189,148 @@ h2 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.25;
         <li>最早的人工智能系统是医疗诊断系统</li>
         <li>模型可解释、可理解，人类能对结果签字负责</li>
       </div>
+      <p style="margin-top: 24px; font-size: 14px; color: rgba(255,255,255,0.5); font-style: italic;">"感性知识很难传授，用概念来讲述很难。"</p>
     </div>
   </div>
 
-  <!-- 6. Gen 2 -->
+  <!-- 8. Meituan Logistics Case -->
+  <div class="slide bg-2">
+    <div class="content">
+      <div class="deco-line"></div>
+      <p class="kicker">第一代AI应用案例</p>
+      <h1>美团即时物流<br>分布式系统</h1>
+      <p class="lead" style="margin-bottom: 24px;">外卖交易平台 → 配送平台 → SLA履约决策 → 骑手执行全流程。</p>
+      <div class="tag-row">
+        <div class="tag">成本</div>
+        <div class="tag tag-highlight">效率</div>
+        <div class="tag">体验</div>
+      </div>
+      <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5);">实时SLA：预计送达时间、配送费价格、配送范围</p>
+    </div>
+  </div>
+
+  <!-- 9. High-Speed Rail -->
   <div class="slide bg-3">
     <div class="content">
       <div class="deco-line"></div>
-      <p class="kicker">第二代 · 1980年代起</p>
-      <h1>数据驱动</h1>
-      <p class="lead" style="margin-bottom: 24px;">用海量数据训练神经网络，让机器学会识别图像、语音和文本。</p>
-      <div class="feature-list">
-        <li>模拟感性行为：图像、语音、文本识别</li>
-        <li>机器"不知道马在哪儿"，只是在向量空间里做分类</li>
-        <li>围棋靠感性直觉，DeepMind 不受经验限制</li>
+      <p class="kicker">自主创新案例</p>
+      <h1>中国高铁<br>"教科书式"谈判</h1>
+      <p class="lead" style="margin-bottom: 24px;">用市场换技术，打破垄断，实现反超。</p>
+      <div class="step-grid" style="margin-top: 20px;">
+        <div class="step-item">
+          <div class="num">2004</div>
+          <div class="label">3.5亿/列 + 3.9亿欧元技术转让</div>
+          <div class="desc">德国西门子因傲慢出局，股票暴跌17%</div>
+        </div>
+        <div class="step-item">
+          <div class="num">2005</div>
+          <div class="label">1.9亿/列 + 8千万欧元技术转让</div>
+          <div class="desc">同一对手报价腰斩，市场博弈的力量</div>
+        </div>
+        <div class="step-item">
+          <div class="num">2025</div>
+          <div class="label">国产率98% · 全球70%市场</div>
+          <div class="desc">最高时速453km/h，从依赖到主导</div>
+        </div>
+        <div class="step-item" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);">
+          <div class="num" style="color: white;">结论</div>
+          <div class="label">技术垄断 → 市场霸权</div>
+          <div class="desc">只有自主创新，才能打破垄断</div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- 7. Five "Nos" -->
+  <!-- 10. Expert System Marketing -->
+  <div class="slide bg-1">
+    <div class="content">
+      <div class="deco-line"></div>
+      <p class="kicker">专家系统应用</p>
+      <h1>消费日用品<br>营销智能化</h1>
+      <div class="feature-list" style="margin-top: 8px;">
+        <li><strong style="color: white;">消费者需求洞察</strong>：从社交媒体、客服、搜索中识别消费趋势与购买意图</li>
+        <li><strong style="color: white;">场景化推荐</strong>：从单品推荐升级为生活场景"解决方案"</li>
+        <li><strong style="color: white;">个性化内容生成</strong>：同一产品针对不同人群差异化表达卖点</li>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. Tsinghua Contributions -->
+  <div class="slide bg-2">
+    <div class="content">
+      <div class="deco-line"></div>
+      <p class="kicker">清华对第一代AI的贡献</p>
+      <h1>从教研组到<br>国家重点实验室</h1>
+      <div class="step-grid" style="margin-top: 20px;">
+        <div class="step-item">
+          <div class="num">1978</div>
+          <div class="label">成立"人工智能与智能控制"教研组</div>
+        </div>
+        <div class="step-item">
+          <div class="num">1985</div>
+          <div class="label">成立"智能机器人"实验室</div>
+        </div>
+        <div class="step-item">
+          <div class="num">1990</div>
+          <div class="label">成立"智能技术与系统"国家重点实验室</div>
+        </div>
+        <div class="step-item">
+          <div class="num">1980s</div>
+          <div class="label">建立问题求解的商空间理论</div>
+          <div class="desc">1983年IJCAI · 1984年IEEE Trans</div>
+        </div>
+      </div>
+      <p style="margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.4);">语音、手写体汉字、NLP、知识工程、移动机器人</p>
+    </div>
+  </div>
+
+  <!-- 12. Deep Blue -->
+  <div class="slide bg-3">
+    <div class="content">
+      <div class="deco-line"></div>
+      <p class="kicker">深蓝成功原因</p>
+      <h1>知识 + 算法 + 算力</h1>
+      <div class="step-grid" style="margin-top: 20px;">
+        <div class="step-item">
+          <div class="num">知识</div>
+          <div class="label">700,000盘大师棋局</div>
+          <div class="desc">大量5-6子残局，评价函数8000参数</div>
+        </div>
+        <div class="step-item">
+          <div class="num">算法</div>
+          <div class="label">α-β剪枝并行算法</div>
+        </div>
+        <div class="step-item" style="grid-column: 1 / -1;">
+          <div class="num">算力</div>
+          <div class="label">2亿棋局/秒 · 平均预测8-12步</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13. Gen 2 - Five Nos -->
   <div class="slide bg-1">
     <div class="content" style="text-align: center;">
       <div class="deco-line deco-line-center"></div>
-      <p class="kicker">第二代的根本缺陷</p>
+      <p class="kicker">第二代 · 连接主义/数据驱动</p>
       <h1>五个"不"</h1>
-      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 40px;">
+      <p class="lead lead-center" style="margin-bottom: 28px;">第一代、第二代AI的根本缺陷</p>
+      <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 32px;">
         <div style="text-align: center;"><div style="font-size: 18px; font-weight: 600; color: white; margin-bottom: 6px;">不安全</div><p style="font-size: 12px; color: rgba(255,255,255,0.5);">对微小扰动极其脆弱</p></div>
         <div style="text-align: center;"><div style="font-size: 18px; font-weight: 600; color: white; margin-bottom: 6px;">不可信</div><p style="font-size: 12px; color: rgba(255,255,255,0.5);">黑箱算法，无法解释</p></div>
         <div style="text-align: center;"><div style="font-size: 18px; font-weight: 600; color: white; margin-bottom: 6px;">不可控</div><p style="font-size: 12px; color: rgba(255,255,255,0.5);">行为难以预测</p></div>
         <div style="text-align: center;"><div style="font-size: 18px; font-weight: 600; color: white; margin-bottom: 6px;">不可靠</div><p style="font-size: 12px; color: rgba(255,255,255,0.5);">泛化能力差</p></div>
         <div style="text-align: center;"><div style="font-size: 18px; font-weight: 600; color: white; margin-bottom: 6px;">不易推广</div><p style="font-size: 12px; color: rgba(255,255,255,0.5);">只能区分，不能真正"认识"</p></div>
       </div>
+      <p style="margin-top: 32px; font-size: 14px; color: rgba(255,255,255,0.5);">机器将雪山图误认为狗，自信度 99%<br>刷脸也不安全</p>
     </div>
   </div>
 
-  <!-- 8. The Problem - Snow Mountain (NEW) -->
+  <!-- 14. Gen 3 - LLM Birth -->
   <div class="slide bg-2">
     <div class="content">
       <div class="deco-line"></div>
-      <p class="kicker">2026年6月演讲</p>
-      <h1>添加一点噪声<br>雪山变狗</h1>
-      <p class="lead" style="margin-bottom: 28px;">第一、第二代AI遇到的核心问题：脆弱性。</p>
-      <div class="card">
-        <p style="font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.7);">机器将雪山图误认为狗，<strong style="color: white;">自信度 99%</strong><br><br>刷脸也不安全——要提升安全，需要软硬件结合。</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 9. Gen 3 -->
-  <div class="slide bg-3">
-    <div class="content">
-      <div class="deco-line"></div>
       <p class="kicker">第三代 · 2020年起</p>
-      <h1>知识+数据<br>融合驱动</h1>
-      <p class="lead" style="margin-bottom: 24px;">把知识和数据同时用起来，建立可解释、可信赖的AI。</p>
-      <div class="tag-row">
-        <div class="tag">知识</div>
-        <div class="tag">数据</div>
-        <div class="tag">算法</div>
-        <div class="tag tag-highlight">算力</div>
-      </div>
-      <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5); font-style: italic;">"为了克服人工智能的固有缺点，唯一的办法是把四个要素同时运用。"</p>
-    </div>
-  </div>
-
-  <!-- 10. Gen 3 - Generation Model (NEW) -->
-  <div class="slide bg-1">
-    <div class="content">
-      <div class="deco-line"></div>
-      <p class="kicker">第三代 · 生成式模型</p>
       <h1>LLM 的诞生</h1>
       <p class="lead" style="margin-bottom: 24px;">主流学派的硅基智能道路走得通。大语言模型带来了前所未有的突破。</p>
       <div class="tag-row">
@@ -213,8 +342,8 @@ h2 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.25;
     </div>
   </div>
 
-  <!-- 11. Two Big Things -->
-  <div class="slide bg-2">
+  <!-- 15. Two Big Things -->
+  <div class="slide bg-3">
     <div class="content">
       <div class="deco-line"></div>
       <p class="kicker">大语言模型</p>
@@ -237,41 +366,68 @@ h2 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.25;
           </div>
         </div>
       </div>
+      <p style="margin-top: 28px; font-size: 14px; color: rgba(255,255,255,0.5); font-style: italic;">规模达到阈值，质量突然质变——但全世界范围内还无法完全理解"涌现"现象的原因。</p>
     </div>
   </div>
 
-  <!-- 12. Emergence -->
-  <div class="slide bg-3">
-    <div class="content" style="text-align: center;">
-      <div class="deco-line deco-line-center"></div>
-      <p class="kicker">涌现现象</p>
-      <h1>规模达到阈值<br>质量突然质变</h1>
-      <p class="lead lead-center" style="margin-top: 20px;">但"到目前为止，全世界范围内都还无法完全理解'涌现'现象出现的原因。"</p>
-    </div>
-  </div>
-
-  <!-- 13. Machine Creation (NEW) -->
+  <!-- 16. AI Alignment -->
   <div class="slide bg-1">
     <div class="content">
       <div class="deco-line"></div>
-      <p class="kicker">机器的能力</p>
-      <h1>机器会创作</h1>
-      <p class="lead" style="margin-bottom: 24px;">让机器创作一首关于"扶贫"的诗，它也能做到。</p>
-      <div class="feature-list">
-        <li>可以理解自己的行为</li>
-        <li>有自知之明</li>
-        <li>中国的工程实现能力极强</li>
+      <p class="kicker">第一步：AI对齐</p>
+      <h1>与人类对齐<br>减少错误</h1>
+      <p class="lead" style="margin-bottom: 24px;">对齐的目的是减少错误，让AI学会和人类对话、对齐人类的价值观。</p>
+      <div class="step-grid" style="margin-top: 20px;">
+        <div class="step-item">
+          <div class="num">40%</div>
+          <div class="label">GPT-3（2020.5）</div>
+        </div>
+        <div class="step-item">
+          <div class="num">20%</div>
+          <div class="label">ChatGPT（2022.11）</div>
+        </div>
+        <div class="step-item">
+          <div class="num">10%</div>
+          <div class="label">GPT-4（2023.3）</div>
+        </div>
+        <div class="step-item" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);">
+          <div class="num" style="color: white;">5.5%</div>
+          <div class="label">GPT-5（2025内部）</div>
+        </div>
       </div>
+      <p style="margin-top: 20px; font-size: 13px; color: rgba(255,255,255,0.4);">GPT-4：对不允许内容请求回应可能性低82%，真实回应可能性高40%</p>
     </div>
   </div>
 
-  <!-- 14. Multimodal (NEW) -->
+  <!-- 17. LLM Future Development -->
   <div class="slide bg-2">
     <div class="content">
       <div class="deco-line"></div>
-      <p class="kicker">多模态生成</p>
-      <h1>图生文<br>文生视频</h1>
-      <p class="lead" style="margin-bottom: 24px;">从单一文本到跨模态理解与生成。</p>
+      <p class="kicker">大语言模型的进一步发展</p>
+      <h1>神经-符号<br>混合架构</h1>
+      <p class="lead" style="margin-bottom: 24px;">将符号主义的可解释性、可验证性回嵌到连接主义系统中。</p>
+      <div class="tag-row">
+        <div class="tag">传统预训练</div>
+        <div class="tag">数据治理</div>
+        <div class="tag">因果约束</div>
+        <div class="tag">对抗鲁棒训练</div>
+      </div>
+      <div class="tag-row" style="margin-top: 12px;">
+        <div class="tag tag-highlight">知识库（长期记忆）</div>
+        <div class="tag">RAG</div>
+        <div class="tag">工具调用</div>
+      </div>
+      <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5); font-style: italic;">"符号主义作为外部可验证模块，回嵌到连接主义系统里。"</p>
+    </div>
+  </div>
+
+  <!-- 18. Image Generation - ViT -->
+  <div class="slide bg-3">
+    <div class="content">
+      <div class="deco-line"></div>
+      <p class="kicker">第二步：多模态生成</p>
+      <h1>图像生成<br>视觉转换器 ViT</h1>
+      <p class="lead" style="margin-bottom: 24px;">将图像分割为patches，视为tokens，统一用Transformer处理。</p>
       <div class="two-col">
         <div>
           <h2 style="font-size: 1.2rem;">图生文</h2>
@@ -285,149 +441,62 @@ h2 { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 600; line-height: 1.25;
     </div>
   </div>
 
-  <!-- 15. AGI Intro -->
-  <div class="slide bg-3">
-    <div class="content" style="text-align: center;">
-      <div class="deco-line deco-line-center"></div>
-      <p class="kicker">通用人工智能</p>
-      <h1>通往 AGI<br>需要四步</h1>
-      <p class="lead lead-center">2024年6月，张钹在清华大学"人文清华讲坛"提出：从大语言模型到通用人工智能，要迈出四步。</p>
-    </div>
-  </div>
-
-  <!-- 16. Step 1 -->
+  <!-- 19. Agentic -->
   <div class="slide bg-1">
     <div class="content">
-      <div class="step-number">1</div>
-      <p class="kicker">第一步</p>
-      <h1>与人类交互</h1>
-      <p class="lead">让AI学会和人类对话、对齐人类的价值观。</p>
-      <p style="margin-top: 20px; font-size: 17px; color: rgba(255,255,255,0.5);">→ 大语言模型的对话能力</p>
+      <div class="deco-line"></div>
+      <p class="kicker">第三步：智能体化</p>
+      <h1>Agentic</h1>
+      <p class="lead" style="margin-bottom: 24px;">能在环境中持续感知—决策—行动的系统。如OpenClaw/AutoClaw：一个开源个人AI助理。</p>
+      <div class="tag-row">
+        <div class="tag">感知 Perception</div>
+        <div class="tag tag-highlight">思考 Thinking · LLM</div>
+        <div class="tag">行动 Acting</div>
+      </div>
+      <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5);">外部世界 → 感知 → Tokens → 理性思考 → 行动 → 外部世界（闭环）</p>
     </div>
   </div>
 
-  <!-- 17. Step 2 -->
-  <div class="slide bg-2">
-    <div class="content">
-      <div class="step-number">2</div>
-      <p class="kicker">第二步</p>
-      <h1>多模态生成</h1>
-      <p class="lead">AI不仅能说话，还能生成图像、视频、音频。</p>
-      <p style="margin-top: 20px; font-size: 17px; color: rgba(255,255,255,0.5);">→ 跨模态理解与生成</p>
-    </div>
-  </div>
-
-  <!-- 18. Step 3 -->
-  <div class="slide bg-3">
-    <div class="content">
-      <div class="step-number">3</div>
-      <p class="kicker">第三步</p>
-      <h1>与数字世界交互</h1>
-      <p class="lead">AI成为智能体，能在数字世界里操作工具、获取反馈。</p>
-      <p style="margin-top: 20px; font-size: 17px; color: rgba(255,255,255,0.5);">→ AI Agent（智能体）</p>
-    </div>
-  </div>
-
-  <!-- 19. Step 4 -->
-  <div class="slide bg-1">
-    <div class="content">
-      <div class="step-number">4</div>
-      <p class="kicker">第四步</p>
-      <h1>与客观世界交互</h1>
-      <p class="lead">AI通过机器人与物理世界连接，感知真实环境、执行真实动作。</p>
-      <p style="margin-top: 20px; font-size: 17px; color: rgba(255,255,255,0.5);">→ 具身智能（Embodied AI）</p>
-    </div>
-  </div>
-
-  <!-- 20. Embodied AI (NEW) -->
+  <!-- 20. AGI Four Steps + Embodied AI -->
   <div class="slide bg-2">
     <div class="content">
       <div class="deco-line"></div>
-      <p class="kicker">具身智能</p>
-      <h1>无需人型<br>只需通用</h1>
-      <p class="lead" style="margin-bottom: 24px;">张院士的观点与马斯克不同。</p>
-      <div class="card">
-        <p style="font-size: 16px; line-height: 1.8; color: rgba(255,255,255,0.7);">外观形态可以多样化<br><strong style="color: white;">关键是软件通用型</strong></p>
+      <p class="kicker">通往AGI的四步</p>
+      <h1>感知世界<br>改变世界</h1>
+      <div class="step-grid" style="margin-top: 20px;">
+        <div class="step-item">
+          <div class="num">1</div>
+          <div class="label">与人类交互</div>
+          <div class="desc">AI对齐，对话能力</div>
+        </div>
+        <div class="step-item">
+          <div class="num">2</div>
+          <div class="label">多模态生成</div>
+          <div class="desc">图像、视频、音频</div>
+        </div>
+        <div class="step-item">
+          <div class="num">3</div>
+          <div class="label">与数字世界交互</div>
+          <div class="desc">AI Agent，操作工具</div>
+        </div>
+        <div class="step-item">
+          <div class="num">4</div>
+          <div class="label">与客观世界交互</div>
+          <div class="desc">具身智能，机器人</div>
+        </div>
       </div>
+      <p style="margin-top: 24px; font-size: 14px; color: rgba(255,255,255,0.5);"><strong style="color: white;">张院士观点：</strong>无需做人型机器人，外观可多样化，关键是软件通用型</p>
     </div>
   </div>
 
-  <!-- 21. AGI Quote -->
-  <div class="slide bg-3">
-    <div class="content">
-      <div class="quote-block">
-        <div class="quote-mark">"</div>
-        <p>通往通用人工智能这个目标，至少需要迈出以上四步，但并不是说，完成这四步就意味着实现了通用人工智能。</p>
-        <div class="attribution">—— 张钹，2024年6月</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 22. Wake-up Call -->
-  <div class="slide bg-1">
-    <div class="content">
-      <div class="quote-block">
-        <div class="quote-mark">"</div>
-        <p>千万别听那些不负责任的宣传，说我们在人工智能方面跟外国已经差不多。怎么会差不多呢？</p>
-        <div class="attribution">—— 张钹</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 23. Innovation Gap -->
-  <div class="slide bg-2">
-    <div class="content">
-      <div class="deco-line"></div>
-      <p class="kicker">清醒认识差距</p>
-      <h1>创新能力不足</h1>
-      <p class="lead" style="margin-bottom: 24px;">从0到1的创新能力很差，ChatGPT的十几项重大创新几乎都是外国人提出的。</p>
-      <div class="card">
-        <p style="font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.7);">现在用的神经网络是什么时候开始研究的？<strong style="color: white;">1943年</strong>。人类花了<strong style="color: white;">74年</strong>才得到今天的Transformer模型。这不是一天、两天做出来的。</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 24. Education Future (NEW) -->
-  <div class="slide bg-3">
-    <div class="content">
-      <div class="deco-line"></div>
-      <p class="kicker">未来展望</p>
-      <h1>AI 将彻底改变<br>教育的未来</h1>
-      <div class="feature-list" style="margin-top: 8px;">
-        <li>教育思想</li>
-        <li>教育管理</li>
-        <li>全民人工智能数智教育，从中小学开始</li>
-      </div>
-    </div>
-  </div>
-
-  <!-- 25. Philosophy -->
-  <div class="slide bg-1">
-    <div class="content">
-      <div class="quote-block">
-        <div class="quote-mark">"</div>
-        <p>我一辈子就做了两件事，一件是读书，另一件就是在清华大学教书育人。</p>
-        <div class="attribution">—— 张钹</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 26. Attitude -->
-  <div class="slide bg-2">
-    <div class="content" style="text-align: center;">
-      <div class="deco-line deco-line-center"></div>
-      <p class="kicker">治学态度</p>
-      <h1>永远在路上</h1>
-      <p class="lead lead-center" style="margin-top: 20px;">"我们不能因为进展而过于乐观，也不必因为挫折而沮丧。人工智能是探索'无人区'，其魅力就在于它永远在路上。"</p>
-    </div>
-  </div>
-
-  <!-- 27. End -->
+  <!-- 21. End -->
   <div class="slide bg-3">
     <div class="content" style="text-align: center;">
       <div class="deco-line deco-line-center" style="background: var(--gold);"></div>
-      <h1 style="font-size: clamp(1.8rem, 3.5vw, 3rem);">探索永无止境</h1>
-      <p style="font-size: 16px; opacity: 0.6; margin-top: 20px; max-width: 560px; margin-left: auto; margin-right: auto;">在第三代人工智能发展上，中国科学家与国际同行处在同一起跑线上。我们有能力为造福国家和民族、造福全人类作出更多、更大贡献。</p>
+      <p class="kicker">治学态度</p>
+      <h1 style="font-size: clamp(1.8rem, 3.5vw, 3rem);">永远在路上</h1>
+      <p style="font-size: 16px; opacity: 0.6; margin-top: 20px; max-width: 560px; margin-left: auto; margin-right: auto;">"我们不能因为进展而过于乐观，也不必因为挫折而沮丧。人工智能是探索'无人区'，其魅力就在于它永远在路上。"</p>
+      <p style="font-size: 14px; opacity: 0.5; margin-top: 28px; font-style: italic;">在第三代人工智能发展上，中国科学家与国际同行处在同一起跑线上。</p>
       <p style="font-size: 12px; opacity: 0.4; margin-top: 40px; letter-spacing: 0.1em;">张钹院士 · 人工智能的发展现状与未来</p>
     </div>
   </div>
