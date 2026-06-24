@@ -6,7 +6,7 @@
 <meta name="format-detection" content="telephone=no">
 <title>张钹院士 - 人工智能的发展现状与未来</title>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; word-wrap: break-word; overflow-wrap: break-word; }
 html, body { height: 100%; width: 100%; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #1E1045; color: white; }
 body { position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
 
@@ -95,10 +95,18 @@ h1 .highlight { color: #E6D5FF; }
       <h1>张钹是谁</h1>
       <ul class="bullet-list">
         <li>1935年生，福建福清人</li>
-        <li>中国科学院院士</li>
+        <li>中国科学院院士（1995）</li>
         <li>清华大学计算机系教授</li>
-        <li>中国人工智能奠基者之一</li>
+        <li>人工智能研究院名誉院长</li>
       </ul>
+      <div class="step-item" style="margin-top: 16px;">
+        <div class="label">主要成就</div>
+        <div class="desc">首位在国际AI大会发表论文的中国人（1983）</div>
+        <div class="desc">首位获得AI国际奖项的中国人（1984）</div>
+        <div class="desc">创立中国首个智能机器人实验室（1985）</div>
+        <div class="desc">培养中国第一位AI博士生（1987）</div>
+        <div class="desc">清华讲台坚守超过60年</div>
+      </div>
     </div>
   </div>
 
@@ -112,14 +120,14 @@ h1 .highlight { color: #E6D5FF; }
         <div class="step-item" style="border-left: 3px solid #7EC8A0;">
           <div class="num" style="color: #7EC8A0;">主流</div>
           <div class="label">行为主义 Behaviorism</div>
-          <div class="desc">模拟人类行为 · 追求相似性</div>
-          <div class="desc">不追求工作原理一致性</div>
+          <div class="desc" style="font-size: 16px;">模拟人类行为 · 追求相似性</div>
+          <div class="desc" style="font-size: 16px;">不追求工作原理一致性</div>
         </div>
         <div class="step-item" style="border-left: 3px solid #9B7ED8;">
           <div class="num" style="color: #9B7ED8;">少数派</div>
           <div class="label">内在主义 Internalism</div>
-          <div class="desc">模拟大脑神经网络 · 追求一致性</div>
-          <div class="desc">探索与人类相同的智能化道路</div>
+          <div class="desc" style="font-size: 16px;">模拟大脑神经网络 · 追求一致性</div>
+          <div class="desc" style="font-size: 16px;">探索与人类相同的智能化道路</div>
         </div>
       </div>
     </div>
@@ -131,10 +139,11 @@ h1 .highlight { color: #E6D5FF; }
       <div class="deco-line"></div>
       <p class="kicker">主流学派</p>
       <h1>行为主义 · 硅基智能</h1>
-      <p class="text-block">用机器模拟人类的行为，追求<strong style="color: white;">相似性</strong>，不追求工作原理的一致性</p>
+      <p class="text-block">用机器模拟人类的行为</p>
       <ul class="bullet-list">
-        <li>"黑箱"方法论：只关注输入输出的行为匹配</li>
-        <li>不关心内部机制如何工作</li>
+        <li>追求<strong style="color: white;">相似性</strong></li>
+        <li>不追求工作原理的一致性</li>
+        <li>"黑箱"方法论：只关注输入输出</li>
         <li>探索与人类不同的机器智能化道路</li>
       </ul>
       <div class="tag-row">
@@ -150,7 +159,11 @@ h1 .highlight { color: #E6D5FF; }
       <div class="deco-line"></div>
       <p class="kicker">少数派</p>
       <h1>内在主义 · 大脑为中心</h1>
-      <p class="text-block">模拟大脑神经网络的工作原理，追求机器与大脑神经机制的<strong style="color: white;">一致性</strong></p>
+      <p class="text-block">模拟大脑神经网络的工作原理</p>
+      <ul class="bullet-list">
+        <li>追求机器与大脑神经机制的<strong style="color: white;">一致性</strong></li>
+        <li>探索与人类相同的智能化道路</li>
+      </ul>
       <div class="step-grid" style="margin-top: 16px;">
         <div class="step-item">
           <div class="num">弱版本</div>
@@ -333,7 +346,7 @@ h1 .highlight { color: #E6D5FF; }
         </div>
       </div>
       <div class="step-item" style="margin-top: 14px; text-align: center;">
-        <div class="big-num">2亿</div>
+        <div class="big-num" style="font-size: 42px;">2亿</div>
         <div class="label">棋局/秒</div>
         <div class="desc">平均预测8-12步</div>
       </div>
@@ -461,7 +474,7 @@ h1 .highlight { color: #E6D5FF; }
         <li>不可靠 — 泛化能力差</li>
         <li>不易推广 — 只能区分，不能真正"认识"</li>
       </ul>
-      <p class="text-block" style="margin-top: 16px; font-size: 15px; color: rgba(255,255,255,0.5); font-style: italic;">计算机"不知道马在哪儿"，只是在特征向量空间中分类</p>
+      <p class="text-block" style="margin-top: 16px; font-size: 15px; color: rgba(255,255,255,0.5); font-style: italic;">计算机"不知道马在哪儿"<br>只是在特征向量空间中分类</p>
     </div>
   </div>
 
@@ -600,7 +613,7 @@ h1 .highlight { color: #E6D5FF; }
       <div class="deco-line"></div>
       <p class="kicker">未来架构</p>
       <h1>神经-符号混合</h1>
-      <p class="text-block">将符号主义的可解释性回嵌到连接主义系统中：</p>
+      <p class="text-block">将符号主义的可解释性<br>回嵌到连接主义系统中</p>
       <div class="tag-row">
         <div class="tag">知识库</div>
         <div class="tag">RAG</div>
@@ -698,10 +711,10 @@ h1 .highlight { color: #E6D5FF; }
       <div class="deco-line"></div>
       <p class="kicker">互动讨论</p>
       <h1>AI与艺术创作</h1>
-      <p class="text-block" style="margin-bottom: 16px;"><strong style="color: white;">核心判断：</strong>AI时代一切皆有可能，不存在AI完全无法替代的人类能力。</p>
+      <p class="text-block" style="margin-bottom: 16px;"><strong style="color: white;">核心判断</strong><br>AI时代一切皆有可能<br>不存在AI完全无法替代的人类能力</p>
       <ul class="bullet-list">
-        <li>人类的美学判断可以通过实践引导让AI学习</li>
-        <li>人类给出提示和反馈，AI自主完成创作并修改</li>
+        <li>人类的美学判断<br>可以通过实践引导让AI学习</li>
+        <li>人类给出提示和反馈<br>AI自主完成创作并修改</li>
         <li>最终可完全符合人类美学要求</li>
         <li>未来可能出现"不会画画的画家"</li>
       </ul>
@@ -717,8 +730,8 @@ h1 .highlight { color: #E6D5FF; }
       <h1>传统企业AI转型</h1>
       <p class="text-block" style="margin-bottom: 16px; color: #F0D878;"><strong style="color: #F0D878;">🚩 最大痛点：缺乏清晰愿景（Vision）</strong></p>
       <ul class="bullet-list">
-        <li>对AI应用后企业最终变成什么样没有清晰目标</li>
-        <li>只能通过不断试错推进，投入资源却可能一无所得</li>
+        <li>对AI应用后<br>企业最终变成什么样<br>没有清晰目标</li>
+        <li>只能通过不断试错推进<br>投入资源却可能一无所得</li>
         <li>新创AI公司目标清晰，仅需要解决如何实现</li>
         <li>创投环境将风险分离，创业者无需承担失败风险</li>
       </ul>
